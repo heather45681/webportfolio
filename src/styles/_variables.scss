@@ -1,0 +1,30 @@
+//z-index管理
+$zIndexs: (
+'banner',
+'banner_filter',
+'banner_name',
+'scroll'
+);
+
+//z-index用法: zindex('header');
+@function zindex($name) {
+  $index: index($zIndexs, $name);
+  @return $index;
+}
+
+
+$service01-color: #FF5D71;
+$service02-color: #F5A623;
+$service03-color: #FDD413;
+$service04-color: #7ED321;
+$service05-color: #76DAFE;
+$service06-color: #6A52FC;
+
+$service-color-word:
+$service01-color,
+$service02-color,
+$service03-color,
+$service04-color,
+$service05-color,
+$service06-color;
+

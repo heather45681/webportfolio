@@ -1,0 +1,63 @@
+
+@mixin layout1280 {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+//絕對定位 - 垂直水平置中
+@mixin center-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//絕對定位 - 水平置中
+@mixin level-middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+//絕對定位 - 垂直置中
+@mixin vertical-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+//:hover之透明度
+@mixin a_hover {
+    opacity: .8;
+    transition: .3s;
+}
+
+//背景圖cover
+@mixin bg_cover{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+//背景圖contain
+@mixin bg_contain{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+//flex置中
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}

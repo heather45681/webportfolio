@@ -1,0 +1,200 @@
+// 按鈕
+@mixin btn_color ($btn-color) {
+    color: #ffffff;
+    background: $btn-color;
+    border: 1px solid $btn-color;
+    &:hover {
+        @include a_hover;
+    }
+}
+
+.btn {
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: .5rem 1.25rem;
+    margin: 3px;
+    font-size: 1.125rem;
+    color: $main-color;
+    background: #ffffff;
+    border: 1px solid $main-color;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        background-color: lighten($main-color, $amount: 55);
+    }
+
+    &.main {
+        @include btn_color($main-color);
+    }
+
+    &.sub {
+        @include btn_color($sub-color);
+        color: $font-color;
+    }
+}
+
+.btn_c {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+//自訂輸入框
+.input_c {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid $border-color;
+
+    &.disable {
+        background-color: $disable;
+    }
+}
+
+//自訂單選radio
+.radio_c {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 2.5rem;
+
+    input[type="radio"] {
+        border: 1px solid $main-color;
+        width: 20px;
+        height: 20px;
+        flex: 20px 0 0;
+        margin: 0 5px 0 0;
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:checked {
+            background: $main-color;
+            &::after {
+                content: '';
+                display: block;
+                border-radius: 50%;
+                width: 6px;
+                height: 6px;
+                background: #ffffff;
+                position: absolute;
+            }
+        }
+    }
+}
+
+//自訂複選
+.checkbox_c {
+    display: inline-flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+        border: 1px solid $main-color;
+        width: 18px;
+        height: 18px;
+        flex: 18px 0 0;
+        margin: 0 5px 0 0;
+        background-color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &:checked {
+            // background-image: url('../img/checkbox_mark.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-color: $main-color;
+        }
+    }
+}
+
+//自訂下拉選單
+.select_c {
+    border: 1px solid $border-color;
+    position: relative;
+    z-index: zindex('select');
+
+    select {
+        padding: 1rem 2rem 1rem 1rem;
+    }
+
+    //arrow 
+    &::after {
+        content: '';
+        @include vertical-middle;
+        z-index: zindex('select_arrow');
+        right: 1rem;
+        width: 0;
+        height: 0;
+        display: block;
+        border-style: solid;
+        border-width: 6.9px 4px 0 4px;
+        border-color: $font-color transparent transparent transparent;
+    }
+}
+
+//頁碼
+.page_num {
+    padding: 2rem 0 0;
+    @include flex_center;
+    flex-wrap: wrap;
+
+    .pn_item {
+        font-size: 1rem;
+        margin: .75rem;
+
+        &.on {
+            margin: .5rem;
+            background: $main-color;
+            color: #ffffff;
+            border-radius: 4px;
+            width: 2rem;
+            height: 2rem;
+            @include flex_center;
+        }
+    }
+
+    .pn_arrow {
+        margin: .5rem;
+        border: 2px solid $border-color;
+        border-radius: 4px;
+        width: 2rem;
+        height: 2rem;
+        @include flex_center;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            border: 2px solid $s-font-color;
+            transition: .3s;
+        }
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+
+//點點ul
+ul.dot {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    color: $main-color;
+
+    li {
+        margin-bottom: 1rem;
+
+        * {
+            color: $font-color;
+        }
+    }
+}
+
+@mixin components--md() {}
+
+@mixin components--sm() {}

@@ -1,0 +1,183 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    font-size: 16px;
+    background-color: $bg-color;
+    color: $font-color;
+}
+
+body * {
+    font-family: 'Noto Sans TC', Helvetica, Tahoma, Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+body a {
+    text-decoration: none;
+    color: inherit;
+
+    &.alink:hover {
+        color: $sub-color;
+    }
+
+    &.aunder:hover {
+        text-decoration: underline;
+    }
+
+    &.ahover:hover {
+        @include a_hover;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+small {
+    font-size: .75rem;
+}
+
+ol {
+    padding-left: 1rem;
+}
+
+.text_l {
+    text-align: left;
+}
+
+.text_r {
+    text-align: right;
+}
+
+.text_c {
+    text-align: center;
+}
+
+.text_j {
+    text-align: justify;
+}
+
+.text_u {
+    text-decoration: underline;
+}
+
+.f_bold {
+    font-weight: bold;
+}
+
+.f_300{
+    font-weight: 300;
+}
+
+.f_900{
+    font-weight: 900;
+}
+
+.dp_b {
+    display: block;
+}
+
+.dp_inb {
+    display: inline-block;
+}
+
+.fz0 {
+    font-size: 0;
+}
+
+.img_rwd {
+    max-width: 100%;
+    height: auto;
+}
+
+.inflexbox.inflexbox {
+    display: inline-flex;
+}
+
+.flexbox.flexbox {
+    display: flex;
+}
+
+.valign_c {
+    align-items: center;
+}
+
+.jc_sb {
+    justify-content: space-between;
+}
+
+
+//間距
+.mt_xs {
+    margin-top: .5rem;
+}
+
+.mt_s {
+    margin-top: 1rem;
+}
+
+.mt_sm {
+    margin-top: 1.5rem;
+}
+
+.mt_m {
+    margin-top: 2rem;
+}
+
+.mt_lg {
+    margin-top: 4rem;
+}
+
+
+@mixin layout--md() {
+
+    html,
+    body {
+        font-size: 15px;
+    }
+
+}
+
+@mixin layout--sm() {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+}

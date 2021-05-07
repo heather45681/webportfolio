@@ -1,0 +1,93 @@
+.case{
+    position: relative;
+    padding: 10% 0;
+
+    &:before{
+        content: '';
+        position: absolute;
+        z-index: 0;
+        display: block;
+        width: 30%;
+        padding-top: 30%;
+        background-color: $work-color;
+        top: 0;
+        right: 0;
+    }
+}
+
+.container{
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    padding: 1.5rem; 
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.c_info{
+    flex: 450px 0 0;
+    padding-right: 4.5rem;
+    p:not(:last-of-type) {
+        margin-bottom: 1rem;
+    }
+}
+
+.c_img{
+    flex: 1;
+    img{
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    }
+}
+
+.cif_block{
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+.cif_title{
+    color: $d-font-color;
+    margin-bottom: .5rem;
+}
+
+.cif_btn{
+    display: inline-block;
+    border: 1px solid $swork-color;
+    padding: 1rem 2rem;
+    color: $swork-color;
+    letter-spacing: 3px;
+    &:hover{
+        background-color: $swork-color;
+        color: white;
+    }
+}
+
+.prev{
+    display: block;
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: $swork-color;
+    text-align: center;
+    border-top: 1px solid $swork-color;
+    cursor: pointer;
+    &:hover{
+        font-weight: bold;
+        transition: .3s;
+    }
+}
+
+@mixin page--lg() {
+    .container{
+        flex-direction: column;
+    }
+
+    .c_info{
+        padding-right: 0;
+        padding-bottom: 3rem;
+    }
+}
+
+@mixin page--md() {}
+
+@mixin page--sm() {}

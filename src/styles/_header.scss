@@ -1,0 +1,14 @@
+header{
+    position: fixed;
+    z-index: zindex('header');
+    background: #cccccc;
+    width: 100%;
+}
+
+nav{
+    @include layout1280;
+}
+
+@mixin header--md() {}
+
+@mixin header--sm() {}
